@@ -8,7 +8,7 @@ const forecast = (lat, long, callback) =>{
         }else if(body.error){
             callback("Imposible encontrar la locacion", undefined);
         }else{
-            callback(undefined, body.current.weather_descriptions + ". La temperatura actual es de: " + body.current.temperature + "°C. La sensacion termica es de: " + body.current.feelslike + "°C")
+            callback(undefined, body.current.weather_descriptions + ". La temperatura actual es de: " + body.current.temperature + "°C. La sensacion termica es de: " + body.current.feelslike + "°C. La humedad es del " + body.current.humidity + " % y el viento es de " + body.current.wind_speed + " Km/h.")
         }
     })
 }
